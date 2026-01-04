@@ -1,27 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>Oscar Dong | Portfolio</title>
   <style>
+    /* Global Styles */
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Arial', sans-serif;
       margin: 0;
       padding: 0;
       background-color: #f9f9f9;
       color: #333;
+      scroll-behavior: smooth; /* smooth scrolling */
     }
 
-    header {
-      background-color: #1a73e8;
-      color: white;
-      padding: 50px 20px;
-      text-align: center;
+    a {
+      text-decoration: none;
+      color: #1a73e8;
     }
 
-    section {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 0 20px;
+    a:hover {
+      text-decoration: underline;
     }
 
     h2 {
@@ -30,57 +29,122 @@
       padding-bottom: 5px;
     }
 
-    ul {
-      list-style: none;
-      padding-left: 0;
+    section {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 0 20px;
     }
 
-    ul li {
-      margin-bottom: 10px;
+    /* Header / Hero Section */
+    header {
+      background-color: #1a73e8;
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
     }
 
-    a {
+    header h1 {
+      margin: 0;
+      font-size: 3em;
+    }
+
+    header p {
+      font-size: 1.2em;
+      margin-top: 10px;
+    }
+
+    /* Navigation Bar */
+    nav {
+      position: sticky;
+      top: 0;
+      background-color: white;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      margin: 0 20px;
+      font-weight: bold;
       color: #1a73e8;
-      text-decoration: none;
     }
 
-    a:hover {
-      text-decoration: underline;
+    nav a:hover {
+      color: #0b59c1;
     }
 
+    /* Projects Buttons */
+    .project {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 10px 10px 10px 0;
+      border: 2px solid #1a73e8;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+      background-color: white;
+    }
+
+    .project:hover {
+      background-color: #1a73e8;
+      color: white;
+    }
+
+    /* Project images placeholder */
+    .project-img {
+      width: 100%;
+      max-width: 300px;
+      display: block;
+      margin-top: 10px;
+      border: 1px solid #ccc;
+    }
+
+    /* Footer */
     footer {
       text-align: center;
       padding: 20px;
       background-color: #eee;
-      margin-top: 50px;
+      margin-top: 60px;
     }
   </style>
 </head>
 <body>
 
-  <!-- Home / Hero Section -->
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Header / Hero Section -->
   <header>
     <h1>Oscar Dong</h1>
     <p>Physics & Data Science Enthusiast | AI Explorer</p>
   </header>
 
-  <!-- About Me -->
+  <!-- About Me Section -->
   <section id="about">
     <h2>About Me</h2>
     <p>Hi! I am Oscar, a student passionate about physics, data science, and artificial intelligence. I love solving problems, exploring new technologies, and building projects that matter.</p>
   </section>
 
-  <!-- Projects -->
+  <!-- Projects Section -->
   <section id="projects">
     <h2>Projects</h2>
-    <ul>
-      <li><a href="https://github.com/YourGitHub/Project1" target="_blank">Project 1: Physics Simulation</a> – Simulated a rocket launch using Python and 3D visualization.</li>
-      <li><a href="https://github.com/YourGitHub/Project2" target="_blank">Project 2: AI Trading Bot</a> – Built a Python bot to analyze crypto prices and automate trading strategies.</li>
-      <li><a href="https://github.com/YourGitHub/Project3" target="_blank">Project 3: Data Analysis Portfolio</a> – Analyzed large datasets using Python and created visual reports.</li>
-    </ul>
+    <div>
+      <a href="https://github.com/YourGitHub/Project1" target="_blank" class="project">Physics Simulation</a>
+      <a href="https://github.com/YourGitHub/Project2" target="_blank" class="project">AI Trading Bot</a>
+      <a href="https://github.com/YourGitHub/Project3" target="_blank" class="project">Data Analysis Portfolio</a>
+    </div>
+    <!-- Placeholder images -->
+    <img src="https://via.placeholder.com/300x200.png?text=Project+1" alt="Project 1 Screenshot" class="project-img">
+    <img src="https://via.placeholder.com/300x200.png?text=Project+2" alt="Project 2 Screenshot" class="project-img">
+    <img src="https://via.placeholder.com/300x200.png?text=Project+3" alt="Project 3 Screenshot" class="project-img">
   </section>
 
-  <!-- Contact -->
+  <!-- Contact Section -->
   <section id="contact">
     <h2>Contact</h2>
     <p>Email: <a href="mailto:example@email.com">example@email.com</a></p>
@@ -88,6 +152,7 @@
     <p>LinkedIn: <a href="https://www.linkedin.com/in/YourLinkedIn" target="_blank">linkedin.com/in/YourLinkedIn</a></p>
   </section>
 
+  <!-- Footer -->
   <footer>
     &copy; 2026 Oscar Dong. All rights reserved.
   </footer>
